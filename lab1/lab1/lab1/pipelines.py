@@ -35,7 +35,7 @@ class BikesPipeline(object):
         self.root = ET.Element('bikes')
 
     def close_spider(self, spider):
-        ET.ElementTree(self.root).write("results/bikes.xml", pretty_print=True, encoding="utf-16")
+        ET.ElementTree(self.root).write("results/bikes.xsl", pretty_print=True, encoding="utf-16")
 
     def process_item(self, item, spider):
         bike = ET.SubElement(self.root, 'bike')
